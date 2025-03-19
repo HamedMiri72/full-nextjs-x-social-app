@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div className="flex justify-between bg-red-300 xsm:bg-yellow-300 sm:bg-green-300 xlg:bg-blue-400">
+        <div className="max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl xxl:max-w-xxl mx-auto flex justify-between">
           <div><Leftbar/></div>
           <div>{children}</div>
           <div><Rightbar/></div>
