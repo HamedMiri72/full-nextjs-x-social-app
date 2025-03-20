@@ -1,8 +1,13 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+
+import Image from "@/components/Image";
+
+
 
 export default function HomePage() {
+  
   return (
-    <div>Home page</div>
+    <div>
+      <Image path="/general/post.jpeg" w={600} h={600} alt={"test-image"}/>
+    </div>
   );
 }
