@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import Image from './Image';
+
 
 export default function Leftbar() {
     const menuList = [
@@ -70,7 +70,7 @@ export default function Leftbar() {
         {/*logo menu button*/}
         <div className='flex flex-col gap-4 text-lg items-center xxl:items-start'>
             <Link href="/" className='p-2 rounded-full hover:bg-[#181818]'>
-                <Image src="icons/logo.svg" alt="logo" width={24} height={24}/>
+                <Image path="icons/logo.svg" alt="logo" w={24} h={24}/>
             </Link>
 
             <div className='flex flex-col gap-4'>
@@ -78,10 +78,10 @@ export default function Leftbar() {
             {menuList.map((item) => (
                 <Link href={item.link} key={item.id} className='p-2 rounded-full hover:bg-[#181818] flex items-center gap-4'>
                     <Image
-                    src={`./icons/${item.icon}`}
+                    path={`./icons/${item.icon}`}
                     alt={item.name}
-                    width={24}
-                    height={24}/>
+                    w={24}
+                    h={24}/>
                     <span className='hidden xxl:flex'>{item.name}</span>
                 </Link>
             ))}
@@ -89,7 +89,7 @@ export default function Leftbar() {
 
             <Link href="/" className="bg-white rounded-full w-12 h-12 items-center justify-center flex xxl:hidden">
                 <Image
-                src="/icons/post.svg" alt='post' width={24} height={24}
+                path="/icons/post.svg" alt='post' w={24} h={24}
                 className=''/>
             </Link>
             <Link href="/" className='hidden xxl:block bg-white text-black rounded-full py-2 px-20 font-bold'>
@@ -103,9 +103,11 @@ export default function Leftbar() {
             <div className='flex items-center gap-2'>
                 <div className='w-10 h-10 relative rounded-full overflow-hidden'>
                     <Image
-                    src="/general/avatar.png"
+                    path="/general/avatar.png"
                     alt="avatar"
-                    fill/>
+                    w={100}
+                    h={100}
+                    tr={true}/>
                 </div>
                 <div className='hidden xxl:flex flex-col'>
                     <span className='font-bold'>Hamed miri</span>
