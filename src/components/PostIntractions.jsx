@@ -2,7 +2,7 @@ import React from "react";
 
 function PostIntractions() {
   return (
-    <div className="flex items-center justify-between my-2 text-textGray gap-4 lg:gap-16 ">
+    <div className="flex items-center justify-between my-2 text-textGray gap-10 sm:gap-16 lg:gap-8 flex-wrap">
       <div className="flex-1 flex items-center justify-between">
         <div className="group flex items-center cursor-pointer gap-2">
           <svg
